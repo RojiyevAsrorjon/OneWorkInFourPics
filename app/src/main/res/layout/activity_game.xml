@@ -1,0 +1,608 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/container"
+    android:layout_height="match_parent"
+    android:background="@drawable/wallpaper"
+    tools:context="uz.gita.onewordinfourpics.ui.screens.GameActivity">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.85"
+        android:background="#131A2D" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/actionBar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="#1C2747"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/backButton"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/ic_back"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintHeight_percent="0.4"
+            app:layout_constraintHorizontal_bias="0.04"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/coinText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="400"
+            android:textColor="@color/white"
+            android:textSize="22sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.96"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:background="@drawable/ic_coin"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintHeight_percent="0.55"
+            app:layout_constraintRight_toLeftOf="@id/coinText"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/levelImage"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/oval"
+        app:layout_constraintBottom_toBottomOf="@id/actionBar"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/actionBar"
+        app:layout_constraintWidth_percent="0.16" />
+
+    <TextView
+        android:id="@+id/levelText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1"
+        android:textColor="@color/white"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/levelImage"
+        app:layout_constraintLeft_toLeftOf="@id/levelImage"
+        app:layout_constraintRight_toRightOf="@id/levelImage"
+        app:layout_constraintTop_toTopOf="@id/levelImage" />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/imageLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/levelImage"
+        app:layout_constraintWidth_percent="0.85">
+
+        <ImageView
+            android:id="@+id/imageGame1"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/bg_imageview"
+            android:padding="4dp"
+            android:src="@drawable/uzb"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_percent="0.48" />
+
+        <ImageView
+            android:id="@+id/imageGame3"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/bg_imageview"
+            android:padding="4dp"
+            android:src="@drawable/usa"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintWidth_percent="0.48" />
+
+        <ImageView
+            android:id="@+id/imageGame2"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/bg_imageview"
+            android:padding="4dp"
+            android:src="@drawable/russia"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_percent="0.48" />
+
+        <ImageView
+            android:id="@+id/imageGame4"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/bg_imageview"
+            android:padding="4dp"
+            android:src="@drawable/japan"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintWidth_percent="0.48" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/answersLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/lettersLayout"
+        app:layout_constraintHeight_percent="0.06"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imageLayout"
+        app:layout_constraintWidth_percent="0.95">
+        <androidx.appcompat.widget.AppCompatButton
+            app:layout_constraintHeight_percent="0.9"
+            app:layout_constraintTop_toTopOf="parent"
+            android:text="A"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:id="@+id/answer1"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintRight_toLeftOf="@id/answer2"
+            app:layout_constraintDimensionRatio="1:1"
+            style="@style/bg_answers" />
+        <androidx.appcompat.widget.AppCompatButton
+            app:layout_constraintHeight_percent="0.9"
+            app:layout_constraintTop_toTopOf="parent"
+            android:text="A"
+            android:id="@+id/answer2"
+            app:layout_constraintLeft_toRightOf="@id/answer1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintRight_toLeftOf="@id/answer3"
+            style="@style/bg_answers" />
+        <androidx.appcompat.widget.AppCompatButton
+            app:layout_constraintHeight_percent="0.9"
+            app:layout_constraintTop_toTopOf="parent"
+            android:text="A"
+            android:id="@+id/answer3"
+            app:layout_constraintLeft_toRightOf="@id/answer2"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintRight_toLeftOf="@id/answer4"
+            style="@style/bg_answers" />
+        <androidx.appcompat.widget.AppCompatButton
+            app:layout_constraintHeight_percent="0.9"
+            app:layout_constraintTop_toTopOf="parent"
+            android:text="A"
+            android:id="@+id/answer4"
+            app:layout_constraintLeft_toRightOf="@id/answer3"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintRight_toLeftOf="@id/answer5"
+            style="@style/bg_answers" />
+        <androidx.appcompat.widget.AppCompatButton
+            app:layout_constraintHeight_percent="0.9"
+            app:layout_constraintTop_toTopOf="parent"
+            android:text="A"
+            android:id="@+id/answer5"
+            app:layout_constraintLeft_toRightOf="@id/answer4"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintRight_toLeftOf="@id/answer6"
+            style="@style/bg_answers" />
+        <androidx.appcompat.widget.AppCompatButton
+            app:layout_constraintHeight_percent="0.9"
+            app:layout_constraintTop_toTopOf="parent"
+            android:text="A"
+            android:id="@+id/answer6"
+            app:layout_constraintLeft_toRightOf="@id/answer5"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintRight_toLeftOf="@id/answer7"
+            style="@style/bg_answers" />
+        <androidx.appcompat.widget.AppCompatButton
+            app:layout_constraintHeight_percent="0.9"
+            app:layout_constraintTop_toTopOf="parent"
+            android:text="A"
+            android:id="@+id/answer7"
+            app:layout_constraintLeft_toRightOf="@id/answer6"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintRight_toLeftOf="@id/answer8"
+            style="@style/bg_answers" />
+        <androidx.appcompat.widget.AppCompatButton
+            app:layout_constraintHeight_percent="0.9"
+            app:layout_constraintTop_toTopOf="parent"
+            android:text="A"
+            android:id="@+id/answer8"
+            app:layout_constraintLeft_toRightOf="@id/answer7"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintRight_toRightOf="parent"
+            style="@style/bg_answers" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/lettersLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:padding="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintWidth_percent="0.95">
+
+        <ImageView
+            android:id="@+id/findButton"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/bg_button"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginLeft="1dp"
+            android:src="@drawable/ic_lamp"
+            app:layout_constraintLeft_toRightOf="@id/letter6Button"
+            app:layout_constraintWidth_percent="0.135" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/letter1Button"
+            style="@style/bg_letters"
+            android:layout_marginEnd="1dp"
+            android:layout_marginBottom="1dp"
+            android:text="A"
+            app:layout_constraintBottom_toTopOf="@id/letter7Button"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/letter2Button"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_percent="0.135" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/letter7Button"
+            style="@style/bg_letters"
+            android:layout_marginTop="1dp"
+            android:text="A"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintRight_toRightOf="@id/letter1Button"
+            app:layout_constraintLeft_toLeftOf="@id/letter1Button"
+            app:layout_constraintTop_toBottomOf="@id/letter1Button"
+            app:layout_constraintWidth_percent="0.135" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/letter2Button"
+            style="@style/bg_letters"
+            android:text="A"
+            android:layout_marginStart="1dp"
+            android:layout_marginEnd="1dp"
+            app:layout_constraintBottom_toBottomOf="@id/letter1Button"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintLeft_toRightOf="@id/letter1Button"
+            app:layout_constraintRight_toLeftOf="@id/letter3Button"
+            app:layout_constraintTop_toTopOf="@id/letter1Button"
+            app:layout_constraintVertical_bias="0.833"
+            app:layout_constraintWidth_percent="0.135" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/letter3Button"
+            style="@style/bg_letters"
+            android:layout_marginStart="1dp"
+            android:layout_marginEnd="1dp"
+            android:text="A"
+            app:layout_constraintBottom_toBottomOf="@id/letter1Button"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintLeft_toRightOf="@id/letter2Button"
+            app:layout_constraintRight_toLeftOf="@id/letter4Button"
+            app:layout_constraintTop_toTopOf="@id/letter1Button"
+
+            app:layout_constraintWidth_percent="0.135" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/letter4Button"
+            style="@style/bg_letters"
+            android:layout_marginStart="1dp"
+            android:layout_marginEnd="1dp"
+            android:text="A"
+            app:layout_constraintBottom_toBottomOf="@id/letter1Button"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintLeft_toRightOf="@id/letter3Button"
+            app:layout_constraintRight_toLeftOf="@id/letter5Button"
+            app:layout_constraintTop_toTopOf="@id/letter1Button"
+            app:layout_constraintWidth_percent="0.135" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/letter5Button"
+            style="@style/bg_letters"
+            android:layout_marginStart="1dp"
+            android:layout_marginEnd="1dp"
+            android:text="A"
+            app:layout_constraintBottom_toBottomOf="@id/letter1Button"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintLeft_toRightOf="@id/letter4Button"
+            app:layout_constraintRight_toLeftOf="@id/letter6Button"
+            app:layout_constraintTop_toTopOf="@id/letter1Button"
+            app:layout_constraintWidth_percent="0.135" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/letter6Button"
+            style="@style/bg_letters"
+            android:layout_marginStart="1dp"
+            android:layout_marginEnd="1dp"
+            android:text="A"
+            app:layout_constraintBottom_toBottomOf="@id/letter1Button"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintLeft_toRightOf="@id/letter5Button"
+            app:layout_constraintRight_toLeftOf="@id/findButton"
+            app:layout_constraintTop_toTopOf="@id/letter1Button"
+            app:layout_constraintWidth_percent="0.135" />
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/letter8Button"
+            style="@style/bg_letters"
+            android:text="A"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintBottom_toBottomOf="@id/letter7Button"
+            app:layout_constraintLeft_toLeftOf="@id/letter2Button"
+            app:layout_constraintRight_toRightOf="@id/letter2Button"
+            app:layout_constraintWidth_percent="0.135" />
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/letter9Button"
+            style="@style/bg_letters"
+
+            android:text="A"
+            app:layout_constraintTop_toTopOf="@id/letter7Button"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintRight_toRightOf="@id/letter3Button"
+            app:layout_constraintLeft_toLeftOf="@id/letter3Button"
+            app:layout_constraintBottom_toBottomOf="@id/letter7Button"
+            app:layout_constraintWidth_percent="0.135" />
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/letter10Button"
+            style="@style/bg_letters"
+            android:text="A"
+            app:layout_constraintTop_toTopOf="@id/letter7Button"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintRight_toRightOf="@id/letter4Button"
+            app:layout_constraintLeft_toLeftOf="@id/letter4Button"
+            app:layout_constraintBottom_toBottomOf="@id/letter7Button"
+            app:layout_constraintWidth_percent="0.135" />
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/letter11Button"
+            style="@style/bg_letters"
+            android:text="A"
+            app:layout_constraintTop_toTopOf="@id/letter7Button"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintRight_toRightOf="@id/letter5Button"
+            app:layout_constraintLeft_toLeftOf="@id/letter5Button"
+            app:layout_constraintBottom_toBottomOf="@id/letter7Button"
+            app:layout_constraintWidth_percent="0.135" />
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/letter12Button"
+            style="@style/bg_letters"
+            android:text="A"
+            app:layout_constraintTop_toTopOf="@id/letter7Button"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintRight_toRightOf="@id/letter6Button"
+            app:layout_constraintLeft_toLeftOf="@id/letter6Button"
+            app:layout_constraintBottom_toBottomOf="@id/letter7Button"
+            app:layout_constraintWidth_percent="0.135" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:id="@+id/layoutShow"
+        android:visibility="gone"
+        android:layout_height="match_parent"
+        android:background="#CC000000">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Total Score: "
+            android:textSize="24sp"
+            android:textColor="#BFF000"
+            app:layout_constraintTop_toTopOf="@id/backButtonShow"
+            app:layout_constraintBottom_toBottomOf="@id/backButtonShow"
+            app:layout_constraintRight_toRightOf="parent"
+            android:id="@+id/totalScore"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="400"
+            android:textSize="24sp"
+            android:textColor="#BFF000"
+            app:layout_constraintTop_toTopOf="@id/backButtonShow"
+            app:layout_constraintBottom_toBottomOf="@id/backButtonShow"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginRight="16dp"
+            android:id="@+id/totalScoreCoin"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="#B3000000"
+            android:gravity="center"
+            android:text="Great"
+            android:textColor="#BFF000"
+            android:id="@+id/correctText"
+            android:textSize="48sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHeight_percent="0.12"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.2" />
+
+        <ImageView
+            android:id="@+id/coins"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/ic_coins"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/coinNum"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintWidth_percent="0.15" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+4"
+            android:textColor="#FFE859"
+            android:textSize="64sp"
+            android:textStyle="bold"
+            android:id="@+id/coinNum"
+            app:layout_constraintBottom_toBottomOf="@id/coins"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintLeft_toLeftOf="@id/coins"
+            app:layout_constraintRight_toRightOf="@id/coins"
+            app:layout_constraintStart_toEndOf="@+id/coins"
+            app:layout_constraintTop_toTopOf="@+id/coins" />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layoutAnswerShow"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintHeight_percent="0.06"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintVertical_bias="0.7"
+            app:layout_constraintWidth_percent="0.95">
+            <androidx.appcompat.widget.AppCompatButton
+                app:layout_constraintHeight_percent="0.9"
+                app:layout_constraintTop_toTopOf="parent"
+                android:text="A"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:id="@+id/answerShow1"
+                app:layout_constraintRight_toLeftOf="@id/answerShow2"
+                app:layout_constraintDimensionRatio="1:1"
+                style="@style/bg_answers" />
+            <androidx.appcompat.widget.AppCompatButton
+                app:layout_constraintHeight_percent="0.9"
+                app:layout_constraintTop_toTopOf="parent"
+                android:text="A"
+                android:id="@+id/answerShow2"
+                app:layout_constraintLeft_toRightOf="@id/answerShow1"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintDimensionRatio="1:1"
+                app:layout_constraintRight_toLeftOf="@id/answerShow3"
+                style="@style/bg_answers" />
+            <androidx.appcompat.widget.AppCompatButton
+                app:layout_constraintHeight_percent="0.9"
+                app:layout_constraintTop_toTopOf="parent"
+                android:text="A"
+                android:id="@+id/answerShow3"
+                app:layout_constraintLeft_toRightOf="@id/answerShow2"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintDimensionRatio="1:1"
+                app:layout_constraintRight_toLeftOf="@id/answerShow4"
+                style="@style/bg_answers" />
+            <androidx.appcompat.widget.AppCompatButton
+                app:layout_constraintHeight_percent="0.9"
+                app:layout_constraintTop_toTopOf="parent"
+                android:text="A"
+                android:id="@+id/answerShow4"
+                app:layout_constraintLeft_toRightOf="@id/answerShow3"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintDimensionRatio="1:1"
+                app:layout_constraintRight_toLeftOf="@id/answerShow5"
+                style="@style/bg_answers" />
+            <androidx.appcompat.widget.AppCompatButton
+                app:layout_constraintHeight_percent="0.9"
+                app:layout_constraintTop_toTopOf="parent"
+                android:text="A"
+                android:id="@+id/answerShow5"
+                app:layout_constraintLeft_toRightOf="@id/answerShow4"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintDimensionRatio="1:1"
+                app:layout_constraintRight_toLeftOf="@id/answerShow6"
+                style="@style/bg_answers" />
+            <androidx.appcompat.widget.AppCompatButton
+                app:layout_constraintHeight_percent="0.9"
+                app:layout_constraintTop_toTopOf="parent"
+                android:text="A"
+                android:id="@+id/answerShow6"
+                app:layout_constraintLeft_toRightOf="@id/answerShow5"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintDimensionRatio="1:1"
+                app:layout_constraintRight_toLeftOf="@id/answerShow7"
+                style="@style/bg_answers" />
+            <androidx.appcompat.widget.AppCompatButton
+                app:layout_constraintHeight_percent="0.9"
+                app:layout_constraintTop_toTopOf="parent"
+                android:text="A"
+                android:id="@+id/answerShow7"
+                app:layout_constraintLeft_toRightOf="@id/answerShow6"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintDimensionRatio="1:1"
+                app:layout_constraintRight_toLeftOf="@id/answerShow8"
+                style="@style/bg_answers" />
+            <androidx.appcompat.widget.AppCompatButton
+                app:layout_constraintHeight_percent="0.9"
+                app:layout_constraintTop_toTopOf="parent"
+                android:text="A"
+                android:id="@+id/answerShow8"
+                app:layout_constraintLeft_toRightOf="@id/answerShow7"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintDimensionRatio="1:1"
+                app:layout_constraintRight_toRightOf="parent"
+                style="@style/bg_answers" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintWidth_percent="0.5"
+            app:layout_constraintDimensionRatio="3:1"
+            app:layout_constraintTop_toBottomOf="@id/layoutAnswerShow"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:background="@drawable/bg_button"
+            android:text="Continue"
+            android:textSize="32sp"
+            android:textAllCaps="false"
+            android:id="@+id/continueButton"
+            android:textColor="@color/white"
+            app:layout_constraintVertical_bias="0.4"/>
+        <ImageButton
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/ic_back"
+            app:layout_constraintWidth_percent="0.07"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_margin="16dp"
+            android:id="@+id/backButtonShow"
+            app:layout_constraintDimensionRatio="1:1"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
